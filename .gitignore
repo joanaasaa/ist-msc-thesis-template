@@ -1,3 +1,5 @@
+*.DS_Store
+
 *.aux 
 *.bbl 
 *.blg 
@@ -23,7 +25,3 @@
 *.nlo
 *.nmc
 *.nml
-
-*.pdf
-
-*.DS_Store
