@@ -1,0 +1,46 @@
+\thispagestyle {empty}
+
+% IST Logo - Signature A
+% parameters: bb=llx lly urx ury (bounding box), width=h_length, height=v_length, angle=angle, scale=factor, clip=true/false, draft=true/false. 
+\includegraphics[bb=9.5cm 11cm 0cm 0cm,scale=0.29]{images/ist_logo.pdf}
+
+\begin{center}
+    %
+    % Figure (Image or plot)
+    \vspace{2.5cm}
+    \includegraphics[height=40mm]{images/ist_alameda_1.jpg}
+
+    % Title, author and degree
+    \vspace{1.0cm}
+    {\FontLb \thesisTitle} \\
+    %%%%%%%%%%%%%%%% COMMENT THIS FOR NO SUBTITLE %%%%%%%%%%%%%%%%
+    \vspace{0.5cm}
+    {\FontMn \thesisSubtitle} \\
+    \vspace{1.2cm}
+    %%%%%%%%%%%%%%%%%%%%%% AND COMMENT THIS %%%%%%%%%%%%%%%%%%%%%%
+    % \vspace{2.6cm}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    {\FontMb \thesisAuthor} \\
+    \vspace{1.2cm}
+    {\FontSn \coverThesis} \\
+    \vspace{0.3cm}
+    {\FontLb \thesisCourse} \\
+    \vspace{1.0cm}
+    {\FontSn %
+        \begin{tabular}{ll}
+            \coverSupervisors: \thesisSupervisor
+        \end{tabular} } \\
+    \vspace{1.0cm}
+    {\FontMb \coverExaminationCommittee} \\
+    \vspace{0.3cm}
+    {\FontSn %
+        \begin{tabular}{c}
+            \coverChairperson:     \thesisChairperson \\
+            \coverSupervisor:      \thesisSupervisor  \\
+            \coverMemberCommittee: \thesisCommiteeMember
+        \end{tabular} } \\
+    \vspace{1.5cm}
+    {\FontMb \thesisDate} \\
+\end{center}
+
+\newpage

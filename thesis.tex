@@ -1,0 +1,92 @@
+\documentclass[10pt,a4paper]{report}
+% \documentclass[10pt,a4paper]{book} % Uncomment this for print
+
+% ----------------------------------------------------------------------
+%  Preamble
+% ----------------------------------------------------------------------
+% There is some important stuff in the preamble. Go check it out!
+\input{preamble.tex}
+
+\begin{document}
+
+% Input acronyms and glossary before any text
+\input{nomenclature.tex}
+\input{acronyms.tex}
+\input{glossary.tex}
+
+% ----------------------------------------------------------------------
+%  Cover
+% ----------------------------------------------------------------------
+\pagestyle{plain} % No headers, footer with centered page number
+\pagenumbering{roman} % Set roman numbering (i,ii,...)
+\input{cover.tex}
+
+% ----------------------------------------------------------------------
+%  Abstract
+% ----------------------------------------------------------------------
+\input{abstract.tex}
+\addcontentsline{toc}{section}{\abstractname}
+
+\pagebreak
+
+\input{resumo.tex}
+\addcontentsline{toc}{section}{\abstractnamept}
+
+% ----------------------------------------------------------------------
+%  Table of contents
+% ----------------------------------------------------------------------
+\tableofcontents
+\addtocontents{toc}{\protect{\pdfbookmark[1]{\contentsname}{toc}}} % Show toc as a pdf bookmark but don't list it in the toc itself
+
+\phantomsection
+\addcontentsline{toc}{section}{\listfigurename}
+\listoffigures
+
+\phantomsection
+\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+
+\phantomsection
+\addcontentsline{toc}{section}{\glossaryname}
+\printglossary
+
+\phantomsection
+\addcontentsline{toc}{section}{\acronymname}
+\printglossary[type=\acronymtype]
+
+\phantomsection
+\addcontentsline{toc}{section}{\nomname}
+\printglossary[type=nomenclature]
+
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+% ----------------------------------------------------------------------
+%  Chapters
+% ----------------------------------------------------------------------
+\input{introduction.tex}
+
+\input{literature_review.tex}
+
+\input{developed_work.tex}
+
+\input{results.tex}
+
+\input{conclusions.tex}
+
+% ----------------------------------------------------------------------
+%  Bibliography
+% ----------------------------------------------------------------------
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{references}
+
+% ----------------------------------------------------------------------
+%  Attachments
+% ----------------------------------------------------------------------
+\appendix
+
+\input{appendices.tex}
+
+\end{document}

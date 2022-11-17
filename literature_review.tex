@@ -1,0 +1,35 @@
+\chapter{Literature Review}
+\label{chapter:literature_review}
+
+\section{How to use the glossary, acronyms and nomenclature}
+
+The glossary, acronym and nomenclature entries must all be listed in the ``glossary.tex'', ``acronym.tex'' and ``nomenclature.tex'' files, respectively. 
+
+If you want to mention a term that is defined in your glossary, do this: \gls{mentioned_definition}. If you check the ``glossary.tex'' file, you will see that there is one more definition there which isn't printed out in the pdf document. This is because glossary entries that are not invoked throughout the text are not printed out to the final document. \textbf{This is also true for acronyms, nomenclature and bibliography entries}.
+
+If you want to use an acronym you can do it in many ways, such as:
+\begin{itemize}
+	\item This: \acrshort{ist};
+	\item This: \acrlong{ist};
+	\item And this: \acrfull{ist};
+	\item The glossaries package can also be used for a nomenclature list. You call the listed nomenclature like you would a regular glossary entry, like this: \gls{roll}, \gls{pitch} and \gls{yaw}.
+\end{itemize} 
+
+
+\section{How to cite from your bibliography file}
+
+If you don't know what a bibliography file looks like, go check out the contents of this document's bib file: ``references.bib''. If your bibliography is small and you can afford to create a bib file by hand, go ahead. However, if your bibliography is too big and/or you'd like to learn how to automatically add entries to your bib file without having to copy and paste stuff from the browser, check out the README.md file!
+
+After a bibliography entry has been added to your bib file you can now cite it. Here are several ways to cite:
+
+\begin{itemize}
+	\item You can cite normally like this: \cite{reynaud22_iberspeech};
+	\item What if you also want to include the author's name? Do this: \citet{reynaud22_iberspeech};
+	\item For just the author's name: \citeauthor{reynaud22_iberspeech};
+\end{itemize} 
+
+\begin{tcolorbox}[title=A note on citations]
+	As you probably know there are several citation styles. This document is using the IEEE citation style. If you wish to change the citation style loo for the natbib package within the ``preamble.tex'' file and change the ``IEEEtranN'' part to your desired bibliography style.
+\end{tcolorbox}
+
+

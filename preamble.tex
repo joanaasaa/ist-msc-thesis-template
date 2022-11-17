@@ -1,0 +1,212 @@
+% ----------------------------------------------------------------------
+% General info
+% ----------------------------------------------------------------------
+\newcommand{\thesisTitle}{The title of a renowned thesis in the field}
+\newcommand{\thesisSubtitle}{Very renowned} % Go to cover.tex file for a subtitle on the cover page
+\newcommand{\thesisAuthor}{Chanandler Bong}
+\newcommand{\thesisCourse}{Electrical and Computer Engineering}
+\newcommand{\thesisSupervisor}{Prof. Full Name}
+\newcommand{\thesisChairperson}{Prof. Full Name}
+\newcommand{\thesisCommiteeMember}{Prof. Full Name}
+\newcommand{\thesisKeywords}{template, msc, tecnico, thesis}
+\newcommand{\thesisPalavraasChave}{template, mestrado, tecnico, tese}
+\newcommand{\thesisDate}{October 2022}
+
+% ----------------------------------------------------------------------
+% Fonts
+% ----------------------------------------------------------------------
+\renewcommand{\rmdefault}{phv} % Roman (i.e. serified) font family
+\renewcommand{\sfdefault}{phv} % Sans serif font family
+\renewcommand{\ttdefault}{lmtt} % Monospaced (i.e. typewritter-like) font family
+
+\def\FontLn{% 16 pt normal
+    \usefont{T1}{phv}{m}{n}\fontsize{16pt}{16pt}\selectfont}
+\def\FontLb{% 16 pt bold
+    \usefont{T1}{phv}{b}{n}\fontsize{16pt}{16pt}\selectfont}
+\def\FontMn{% 14 pt normal
+    \usefont{T1}{phv}{m}{n}\fontsize{14pt}{14pt}\selectfont}
+\def\FontMb{% 14 pt bold
+    \usefont{T1}{phv}{b}{n}\fontsize{14pt}{14pt}\selectfont}
+\def\FontSn{% 12 pt normal
+    \usefont{T1}{phv}{m}{n}\fontsize{12pt}{12pt}\selectfont}
+
+% ----------------------------------------------------------------------
+% Page layout
+% ----------------------------------------------------------------------
+% Page margins
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+
+% Line spacing
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.5}
+% \doublespacing
+
+% Indent before all paragraphs
+\usepackage{indentfirst}
+
+% ----------------------------------------------------------------------
+% Hyperlinks
+% ----------------------------------------------------------------------
+\usepackage[pdftex]{hyperref} % enhance documents that are to be output as HTML and PDF
+\hypersetup{colorlinks, % Eliminates borders around links
+    linkcolor=black, % Color for normal internal links
+    anchorcolor=black, % Color for anchor text
+    citecolor=black, % Color for bibliographical citations
+    filecolor=black, % Color for URLs which open local files
+    menucolor=black, % Color for Acrobat menu items
+    urlcolor=cyan, % Color for linked URLs
+    bookmarksopen=false, % Don't expand bookmarks
+    bookmarksnumbered=true, % Number bookmarks
+    pdftitle={\thesisTitle},
+    pdfauthor={\thesisAuthor},
+    pdfsubject={\thesisCourse},
+    pdfkeywords={\thesisKeywords},
+    pdfstartview=FitV,
+    pdfdisplaydoctitle=true}
+
+\usepackage[acronym,nonumberlist]{glossaries} % Must be loaded after hyperref. Option acronym is for separate list of  acronyms. Option nonumberlist is for not listing the pages in which an entry has been indexed.
+\newglossary{nomenclature}{nmc}{nml}{Nomenclature}
+\makeglossaries
+
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{IEEEtranN} % Change here the bibliography style for your document
+
+\usepackage{notoccite}
+
+% ----------------------------------------------------------------------
+% Graphics
+% ----------------------------------------------------------------------
+% Color support
+\usepackage[table, dvipsnames]{xcolor} % Table option loads  the colortbl package (allows coloring rows, columns, and cells within tables).
+
+% Image support
+\usepackage{graphicx}
+\usepackage{wrapfig} % Tro wrap text around figure.
+
+% Captions
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{subcaption}
+
+% Landscape support for images and tables
+\usepackage{rotating} % Use \begin{sidewaystable} and \begin{sidewaysfigure}
+
+% Table support
+\usepackage{dcolumn} % Alignment of tabular columns
+\newcolumntype{d}{D{.}{.}{-1}} % column aligned by the point separator '.'
+\newcolumntype{e}{D{E}{E}{-1}} % column aligned by the exponent 'E'
+\usepackage{multirow}
+\usepackage{booktabs}
+
+% For colored boxes
+\usepackage{tcolorbox}
+
+% ----------------------------------------------------------------------
+% Technical
+% ----------------------------------------------------------------------
+% Math
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% Programming
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% ----------------------------------------------------------------------
+% Language
+% ----------------------------------------------------------------------
+% Encoding
+\usepackage[utf8]{inputenc}
+
+% Language
+\usepackage[english]{babel}
+\selectlanguage{english}
+
+\newcommand{\acknowledgments}{@undefined}
+\newcommand{\abstractnamept}{@undefined}
+\newcommand{\nomname}{@undefined}
+
+\addto\captionsenglish{\renewcommand{\abstractname}{Abstract}}
+\addto\captionsenglish{\renewcommand{\abstractnamept}{Resumo}}
+\addto\captionsenglish{\renewcommand{\acknowledgments}{Acknowledgments}}
+\addto\captionsenglish{\renewcommand{\contentsname}{Contents}}
+\addto\captionsenglish{\renewcommand{\listtablename}{List of Tables}}
+\addto\captionsenglish{\renewcommand{\listfigurename}{List of Figures}}
+\addto\captionsenglish{\renewcommand{\glossaryname}{Glossary}}
+\addto\captionsenglish{\renewcommand{\acronymname}{Acronyms}}
+\addto\captionsenglish{\renewcommand{\nomname}{Nomenclature}}
+\addto\captionsenglish{\renewcommand{\bibname}{References}}
+\addto\captionsenglish{\renewcommand{\appendixname}{Appendix}}
+
+% ----------------------------------------------------------------------
+% Additional features
+% ----------------------------------------------------------------------
+% Underlining
+\usepackage[normalem]{ulem}
+
+% Dates with consistent layouts
+\usepackage[en-US]{datetime2}
+
+% Customize enumerate labels
+\usepackage[inline,shortlabels]{enumitem}
+
+% For \tab command
+\usepackage{tabto}
+
+% For "horizontal lists"
+\usepackage{multicol} % Same as enumitem inline
+
+% For stylish quotes
+\usepackage{csquotes}
+
+% For code
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+% For directory trees
+\usepackage{dirtree}
+\renewcommand*\DTstylecomment{\sffamily\footnotesize\selectfont}
+
+\usepackage{pdfpages}
+
+% ----------------------------------------------------------------------
+% Commands
+% ----------------------------------------------------------------------
+\newcommand{\coverThesis}{Thesis to obtain the Master of Science Degree in}
+\newcommand{\coverSupervisors}{Supervisor}
+\newcommand{\coverExaminationCommittee}{Examination Committee}
+\newcommand{\coverChairperson}{Chairperson}
+\newcommand{\coverSupervisor}{Supervisor}
+\newcommand{\coverMemberCommittee}{Member of the Committee}
+
+% For degree symbol
+\renewcommand{\deg}{$^\circ \ $}
+
+% For feature box (uses tcolorbox package)
+\newtcolorbox[]{feature}[1]{
+    title={\textbf{Feature} #1},
+}
+
