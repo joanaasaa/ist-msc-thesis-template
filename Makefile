@@ -1,17 +1,16 @@
 FILE=thesis
 
-jupyter:
-	jupyter nbconvert ./resources/scripts/feature3_math.ipynb --to html
-
 document:
 	latexmk -f -pdf -synctex=1 $(FILE).tex
 
 clean:
 	rm -f $(FILE).n*
+	rm -f $(FILE).glsdefs
 	latexmk -c
 
 veryclean:
 	rm -f $(FILE).n*
+	rm -f $(FILE).glsdefs
 	latexmk -C
 
 all:
