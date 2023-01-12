@@ -1,7 +1,31 @@
+\newglossaryentry{a}
+{
+	type=nomenclature,
+	name={$a$},
+	description={A custom, but relevant variable.}
+}
+
+\newglossaryentry{b}
+{
+	type=nomenclature,
+	name={$b$},
+	description={Another custom, but relevant variable.}
+}
+
+\newglossaryentry{c}
+{
+	type=nomenclature,
+	name={$c$},
+	description={Yet another custom, but relevant variable.}
+}
+
+\newglossaryentry{greek_letters}{type=nomenclature,name=Greek Letters,description={\nopostdesc}}
+
 \newglossaryentry{roll}
 {
 	type=nomenclature,
 	name={$\phi$},
+	parent=greek_letters,
 	description={Roll}
 }
 
@@ -9,6 +33,7 @@
 {
 	type=nomenclature,
 	name={$\theta$},
+	parent=greek_letters,
 	description={Pitch}
 }
 
@@ -16,5 +41,16 @@
 {
 	type=nomenclature,
 	name={$\psi$},
-	description={Yaw}
+	parent=greek_letters,
+	description={Yaw},
+}
+
+
+\newglossaryentry{greek_letters_constants}{type=nomenclature,name=Constants,parent=greek_letters,description={\nopostdesc}}
+
+\newglossaryentry{pi}{
+	type=nomenclature,
+	parent=greek_letters_constants,
+	name={$\pi$},
+	description={A mathematical constant that is the ratio of a circle's circumference to its diameter, approximately equal to 3.14159.},
 }
