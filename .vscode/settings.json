@@ -1,16 +1,36 @@
 {
-    "[latex]": {
-        "editor.wordWrap": "on",
-        "editor.formatOnSave": false,
+  "[latex]": {
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": false
+  },
+  // SYNCTEX
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+  "latex-workshop.synctex.synctexjs.enabled": true,
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  // PLAY BUTTON
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "build",
+      "tools": ["build"]
     },
-    // SYNCTEX
-    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
-    "latex-workshop.synctex.synctexjs.enabled": true,
-    "latex-workshop.synctex.afterBuild.enabled": true,
-    // PLAY BUTTON
-    "latex-workshop.latex.autoBuild.run": "onSave",
-    "latex-workshop.latex.external.build.command": "make",
-    "latex-workshop.latex.external.build.args": [
-        "all",
-    ],
+    {
+      "name": "clean",
+      "tools": ["clean"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "build",
+      "command": "make",
+      "args": ["all"],
+      "env": {}
+    },
+    {
+      "name": "clean",
+      "command": "make",
+      "args": ["clean"],
+      "env": {}
+    }
+  ]
 }
